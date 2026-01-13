@@ -1,9 +1,9 @@
-import { Injectable } from '@nestjs/common';
-import { CreateStudentDto } from './dto/create-student.dto';
-import { UpdateStudentDto } from './dto/update-student.dto';
-import { InjectRepository } from '@nestjs/typeorm';
-import { Repository } from 'typeorm';
-import { Student } from './entities/student.entity';
+import { Injectable } from "@nestjs/common";
+import { CreateStudentDto } from "./dto/create-student.dto";
+import { UpdateStudentDto } from "./dto/update-student.dto";
+import { InjectRepository } from "@nestjs/typeorm";
+import { Repository } from "typeorm";
+import { Student } from "./entities/student.entity";
 
 @Injectable()
 export class StudentsService {
@@ -16,14 +16,14 @@ export class StudentsService {
   }
 
   findAll() {
-    return `This action returns all students`;
+    return "This action returns all students";
   }
 
   findOne(id: number) {
     return `학생 ${id}`;
   }
 
-  update(id: number, updateStudentDto: UpdateStudentDto) {
+  update(id: number, _updateStudentDto: UpdateStudentDto) {
     return `This action updates a #${id} student`;
   }
 
